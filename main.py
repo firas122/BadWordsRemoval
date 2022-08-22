@@ -23,4 +23,4 @@ def home():
 
     str = ' '
 
-    return(str.join(r))
+    return({"res":str.join(r)})
