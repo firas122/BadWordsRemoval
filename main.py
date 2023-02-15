@@ -23,9 +23,10 @@ def home():
         searchObj9 = re.search(r'[k,K]+[a,A]+[b,B]+[o,O]+[U,u]+[l,L]+', r[i])
         searchObj10 = re.search(r'[z,Z]+[a,A]+[b,B]+[o,O]+[U,u]+[R,r]+[a,A]*', r[i])
         searchObj11 = re.search(r'[z,Z]+[b,B]+[a,A]+[R,r]+', r[i])
+        searchObj12 = re.search(r'[n,N]+[a,A]+[m,M]+', r[i])
 
 
-        if searchObj1 or searchObj2 or  searchObj3 or searchObj5 or searchObj6 or searchObj7 or searchObj8 or searchObj9 or searchObj10 or searchObj11:
+        if searchObj1 or searchObj2 or  searchObj3 or searchObj5 or searchObj6 or searchObj7 or searchObj8 or searchObj9 or searchObj10 or searchObj11 or searchObj12:
             s = "*"*len(r[i])
             r[i] = s
 
