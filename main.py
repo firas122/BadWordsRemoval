@@ -6,12 +6,13 @@ from flask import request
 app = flask.Flask(__name__)
 @app.route('/do', methods=['GET', 'POST'])
 def home():
+    global op
     if request.method == 'POST':
         p = request.form.get('string')
         c = request.form.get('c')
         op = request.form.get('op')
         r = p.split(" ")
-    k = "r'[z,Z]{1}[e,E]+[b,B]+[i,I]*|[m,M]+[a,A]+[k,K]+[7]+[o,O]+[U,u]+[t,T]{1}|[m,M]*[n,N]{1}[a,A]+[y,Y]+[e,E]*[k,K]+[a,A]*|[3]{0,1}[a,A]+[s,S]+[b,B]+[a,A]+|[m,M]{1}[i,I]+[b,B]+[o,O]+[u,U]+[n,N]+|[W,w]{1}[a,A]+[b,B]+[n,N]+[a,A]+|[k,k]+[a,A]+[7]+[t,T]+[a,A]+|[k,k]+[a,A]+[b,B]+[o,O]+[U,u]+[l,L]+|[z,Z]+[a,A]+[b,B]+[o,O]+[U,u]+[R,r]+[a,A]*|[z,Z]+[b,B]+[a,A]+[R,r]+'"
+
     for i in range(len(r)):
         searchObj1 = re.search(r'[z,Z]{1}[e,E]+[b,B]+[i,I]*', r[i])
         searchObj2 = re.search(r'[m,M]*[n,N]{1}[a,A]+[y,Y]+[e,E]*[k,K]+[a,A]*', r[i])
